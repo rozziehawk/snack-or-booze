@@ -5,10 +5,11 @@ import Home from "./Home";
 import SnackOrBoozeApi from "./Api";
 import NavBar from "./NavBar";
 import { Route, Switch } from "react-router-dom";
-import FoodMenu from "./FoodMenu";
+//import FoodMenu from "./FoodMenu";
+import SnackOrBoozeMenu from "./ListMenu";
 import Snack from "./FoodItem";
 import Drink from "./DrinkItem";
-import DrinkMenu from "./DrinkMenu";
+//import DrinkMenu from "./DrinkMenu";
 //import DrinkItem from "./DrinkItem";
 
 function App() {
@@ -43,13 +44,13 @@ function App() {
               <Home snacks={snacks} />
             </Route>
             <Route exact path="/snacks">
-              <FoodMenu snacks={snacks} title="Snacks" />
+              <SnackOrBoozeMenu title="Food Items" path="/snacks" items={snacks}  />
             </Route>
             <Route path="/snacks/:id">
               <Snack items={snacks} cantFind="/snacks" />
             </Route>
             <Route exact path="/drinks">
-              <DrinkMenu drinks={drinks} title="Drinks" />
+              <SnackOrBoozeMenu title="Drinks" path="/drinks" items={drinks} />
             </Route>
             <Route path="/drinks/:id">
               <Drink items={drinks} cantFind="/drinks" />

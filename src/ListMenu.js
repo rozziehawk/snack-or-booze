@@ -1,31 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./FoodMenu.css";
+import "./ListMenu.css";
 import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  ListGroup,
-  ListGroupItem
-} from "reactstrap";
+    Card,
+    CardBody,
+    CardTitle,
+    CardText,
+    ListGroup,
+    ListGroupItem
+  } from "reactstrap";
 
-function FoodMenu({ snacks }) {
+
+function ListMenu({ title, items, path }) {
   return (
     <section className="col-md-4">
       <Card>
         <CardBody>
           <CardTitle className="font-weight-bold text-center">
-            Food Menu
+            {title}
           </CardTitle>
           <CardText>
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </CardText>
           <ListGroup>
-            {snacks.map(snack => (
-              <Link to={`/snacks/${snack.id}`} key={snack.id}>
-                <ListGroupItem>{snack.name}</ListGroupItem>
+            {items.map(item => (
+              <Link to={`${path}/${item.id}`} key={item.id}>
+                <ListGroupItem>{item.name}</ListGroupItem>
               </Link>
             ))}
           </ListGroup>
@@ -35,4 +36,4 @@ function FoodMenu({ snacks }) {
   );
 }
 
-export default FoodMenu;
+export default ListMenu;
