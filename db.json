@@ -27,6 +27,13 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
+    },
+    {
+      "id": "caipirinha",
+      "name": "Caipirinha",
+      "description": "Refreshing and deadly Brazilian drink!",
+      "recipe": "cut lime in half or quarters and place at bottom of jar with 1 tablespoon of sugar. Crush with pestle; fill jar with crushed ice then with cachaca",
+      "serve": "shake and pour into glass and enjoy. Take your time before having a second one!"
     }
   ],
   "snacks": [

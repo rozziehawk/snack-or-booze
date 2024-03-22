@@ -10,6 +10,8 @@ import {
     ListGroupItem
   } from "reactstrap";
 
+  /* Code to display either snack or drink menu */
+
 
 function ListMenu({ title, items, path }) {
   return (

@@ -17,12 +17,12 @@ function App() {
 
   useEffect(() => {
     async function getSnacksAndDrinks() {
+      // get the lists of items from the memu api and set them as state variable
       let snacks = await SnackOrBoozeApi.getSnacks();
       let drinks = await SnackOrBoozeApi.getDrinks();
       setSnacks(snacks);
       setDrinks(drinks);
-      console.log(snacks);
-      console.log(drinks);
+     
       setIsLoading(false);
     }
     getSnacksAndDrinks();

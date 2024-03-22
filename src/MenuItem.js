@@ -2,6 +2,8 @@ import React from "react";
 import { Redirect, useParams } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 
+/* code to display detail of an item from either snack or drink menu */
+
 function MenuItem({ items, name, path,  cantFind }) {
   const { id } = useParams();
 
