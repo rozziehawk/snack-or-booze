@@ -7,7 +7,7 @@ import NavBar from "./NavBar";
 import { Route, Switch } from "react-router-dom";
 //import FoodMenu from "./FoodMenu";
 import SnackOrBoozeMenu from "./ListMenu";
-import Snack from "./FoodItem";
+import MenuItem from "./MenuItem";
 import Drink from "./DrinkItem";
 //import DrinkMenu from "./DrinkMenu";
 //import DrinkItem from "./DrinkItem";
@@ -47,13 +47,13 @@ function App() {
               <SnackOrBoozeMenu title="Food Items" path="/snacks" items={snacks}  />
             </Route>
             <Route path="/snacks/:id">
-              <Snack items={snacks} cantFind="/snacks" />
+              <MenuItem items={snacks} cantFind="/snacks" />
             </Route>
             <Route exact path="/drinks">
               <SnackOrBoozeMenu title="Drinks" path="/drinks" items={drinks} />
             </Route>
             <Route path="/drinks/:id">
-              <Drink items={drinks} cantFind="/drinks" />
+              <MenuItem items={drinks} cantFind="/drinks" />
             </Route>
             <Route>
               <p>Hmmm. I can't seem to find what you want.</p>
