@@ -8,9 +8,7 @@ import { Route, Switch } from "react-router-dom";
 //import FoodMenu from "./FoodMenu";
 import SnackOrBoozeMenu from "./ListMenu";
 import MenuItem from "./MenuItem";
-import Drink from "./DrinkItem";
-//import DrinkMenu from "./DrinkMenu";
-//import DrinkItem from "./DrinkItem";
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
